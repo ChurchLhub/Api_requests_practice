@@ -5,7 +5,7 @@ try:
     response = requests.get(url,timeout=5)
     response.raise_for_status()
     data = response.json()
-    print(data["fact"])
+    print(f"🐱 Random Cat Fact\n------------------\n{data["fact"]}")
 except requests.exceptions.ConnectionError:
     print("Connection error occurred")
 
